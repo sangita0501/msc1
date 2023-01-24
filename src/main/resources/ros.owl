@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#"
+     xml:base="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Data_Publisher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Data_Publisher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Topic"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Data_Subscriber"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Data_Subscriber -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Data_Subscriber">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Topic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Datatypes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Datatypes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Value"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Master_Node -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Master_Node">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:system_template"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Node -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Node">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Master_Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Parameter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Service -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Service">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:ServiceClient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:ServiceClient">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Service"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:ServiceServer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:ServiceServer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:ServiceServer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Service"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Topic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Topic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Value -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Value">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:system_template -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:system_template"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:FireAndForget -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:FireAndForget">
+        <rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Pub_Sub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Pub_Sub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Topic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Request_Reply -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Request_Reply">
+        <rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Service"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Parameter"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Service"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Topic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/4/untitled-ontology-57#ROS:Value"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

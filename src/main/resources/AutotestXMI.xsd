@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:Autosar_Adaptive="http://www.xpand.org/xpand.demo.emf.datamodel" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.xpand.org/xpand.demo.emf.datamodel">
+	<xsd:import namespace="http://www.omg.org/XMI" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/XMI.xsd"/>
+	<xsd:complexType name="ServiceInterfacespec">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="VariableDataPrototype" type="Autosar_Adaptive:Events"/>
+			<xsd:element name="Operations" type="Autosar_Adaptive:Method"/>
+			<xsd:element name="fields" type="Autosar_Adaptive:Field"/>
+			<xsd:element ref="xmi:Extension"/>
+		</xsd:choice>
+		<xsd:attribute ref="xmi:id"/>
+		<xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+	</xsd:complexType>
+	<xsd:element name="ServiceInterfacespec" type="Autosar_Adaptive:ServiceInterfacespec"/>
+	<xsd:complexType name="Method">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element ref="xmi:Extension"/>
+		</xsd:choice>
+		<xsd:attribute ref="xmi:id"/>
+		<xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+		<xsd:attribute name="FireAndForgetMethod" type="xsd:string"/>
+	</xsd:complexType>
+	<xsd:element name="Method" type="Autosar_Adaptive:Method"/>
+	<xsd:complexType name="Events">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element ref="xmi:Extension"/>
+		</xsd:choice>
+		<xsd:attribute ref="xmi:id"/>
+		<xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+		<xsd:attribute name="OnSubscription" type="xsd:boolean"/>
+	</xsd:complexType>
+	<xsd:element name="Events" type="Autosar_Adaptive:Events"/>
+	<xsd:complexType name="Field">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element ref="xmi:Extension"/>
+		</xsd:choice>
+		<xsd:attribute ref="xmi:id"/>
+		<xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+		<xsd:attribute name="hasGetter" type="xsd:string" use="required"/>
+		<xsd:attribute name="hasNotifier" type="xsd:string"/>
+		<xsd:attribute name="hasSetter" type="xsd:string"/>
+	</xsd:complexType>
+	<xsd:element name="Field" type="Autosar_Adaptive:Field"/>
+	<xsd:complexType name="SwComponentType">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="Port" type="Autosar_Adaptive:PortPrototype"/>
+			<xsd:element ref="xmi:Extension"/>
+		</xsd:choice>
+		<xsd:attribute ref="xmi:id"/>
+		<xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+	</xsd:complexType>
+	<xsd:element name="SwComponentType" type="Autosar_Adaptive:SwComponentType"/>
+	<xsd:complexType name="AdaptiveApplicationSwComponentType">
+		<xsd:complexContent>
+			<xsd:extension base="Autosar_Adaptive:SwComponentType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="AdaptiveApplicationSwComponentType" type="Autosar_Adaptive:AdaptiveApplicationSwComponentType"/>
+	<xsd:complexType name="PortPrototype">
+		<xsd:choice minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="Portinterfacespec" type="Autosar_Adaptive:ServiceInterfacespec"/>
+			<xsd:element ref="xmi:Extension"/>
+		</xsd:choice>
+		<xsd:attribute ref="xmi:id"/>
+		<xsd:attributeGroup ref="xmi:ObjectAttribs"/>
+		<xsd:attribute name="Portinterfacespec" type="xsd:string"/>
+	</xsd:complexType>
+	<xsd:element name="PortPrototype" type="Autosar_Adaptive:PortPrototype"/>
+	<xsd:complexType name="ProvidedPortPrototype">
+		<xsd:complexContent>
+			<xsd:extension base="Autosar_Adaptive:PortPrototype"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="ProvidedPortPrototype" type="Autosar_Adaptive:ProvidedPortPrototype"/>
+	<xsd:complexType name="RequiredPortPrototype">
+		<xsd:complexContent>
+			<xsd:extension base="Autosar_Adaptive:PortPrototype"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="RequiredPortPrototype" type="Autosar_Adaptive:RequiredPortPrototype"/>
+	<xsd:complexType name="CompositionSwComponent">
+		<xsd:complexContent>
+			<xsd:extension base="Autosar_Adaptive:SwComponentType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="CompositionSwComponent" type="Autosar_Adaptive:CompositionSwComponent"/>
+</xsd:schema>

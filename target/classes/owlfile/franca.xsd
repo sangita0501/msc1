@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="UMLProfile">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Documentation" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="id" use="required" type="xs:string"/>
+						<xs:attribute name="name" use="required" type="xs:string"/>
+						<xs:attribute name="version" use="required" type="xs:decimal"/>
+						<xs:attribute name="notes" use="required" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Content" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Stereotypes" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Stereotype" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="AppliesTo" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+													<xs:element name="TaggedValues" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Tag" minOccurs="0" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:attribute name="name" use="required" type="xs:string"/>
+																		<xs:attribute name="description" use="required" type="xs:string"/>
+																		<xs:attribute name="values" use="required" type="xs:string"/>
+																		<xs:attribute name="default" use="required" type="xs:string"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="Constraints" maxOccurs="unbounded">
+														<xs:complexType/>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="name" use="required" type="xs:string"/>
+												<xs:attribute name="notes" use="required" type="xs:string"/>
+												<xs:attribute name="cx" use="required" type="xs:string"/>
+												<xs:attribute name="cy" use="required" type="xs:string"/>
+												<xs:attribute name="metafile" use="required" type="xs:string"/>
+												<xs:attribute name="bgcolor" use="required" type="xs:byte"/>
+												<xs:attribute name="fontcolor" use="required" type="xs:byte"/>
+												<xs:attribute name="bordercolor" use="required" type="xs:byte"/>
+												<xs:attribute name="borderwidth" use="required" type="xs:byte"/>
+												<xs:attribute name="hideicon" use="required" type="xs:byte"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="TaggedValueTypes" maxOccurs="unbounded">
+								<xs:complexType/>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://www.semanticweb.org/sangi/ontologies/2021/5/untitled-ontology-21/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:VehicleServie_Ontology="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#">
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/5/untitled-ontology-21">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Annotation properties -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://purl.org/dc/elements/1.1/creator -->
+
+<rdf:Description rdf:about="http://purl.org/dc/elements/1.1/creator">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Object Properties -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://www.co-ode.org/ontologies/ont.owl#equivalence -->
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#equivalence">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Classes -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://www.co-ode.org/ontologies/ont.owl#AR_DataTypeMapping -->
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#AR_DataTypeMapping">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_ArgumentDataPrototype"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.co-ode.org/ontologies/ont.owl#AR_Notifications -->
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#AR_Notifications">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_Events"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.co-ode.org/ontologies/ont.owl#AR_SWComponentType -->
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#AR_SWComponentType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.co-ode.org/ontologies/ont.owl#AR_SubscribeEvents -->
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#AR_SubscribeEvents">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:equivalentClass rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#EventSubscribe"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_Events"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.co-ode.org/ontologies/ont.owl#FireAndForget -->
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#FireAndForget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:equivalentClass rdf:nodeID="genid1"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid1">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#equivalence"/>
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_REQUEST_NO_RETURN"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#FireAndForget">
+	<owl:equivalentClass rdf:nodeID="genid2"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid2">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#equivalence"/>
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_fireAndForget"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#FireAndForget">
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Method_Invokation"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.co-ode.org/ontologies/ont.owl#Fr_Version_major -->
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Fr_Version_major">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_PortInterface"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.co-ode.org/ontologies/ont.owl#Fr_Version_minor -->
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Fr_Version_minor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_PortInterface"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.co-ode.org/ontologies/ont.owl#ProviderPortPrototype -->
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#ProviderPortPrototype">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceInterfaceType"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.co-ode.org/ontologies/ont.owl#ReceiverPortPrototype -->
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#ReceiverPortPrototype">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceInterfaceType"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.co-ode.org/ontologies/ont.owl#AR_ChargeManagementCore() -->
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#AR_ChargeManagementCore()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_ClientServerOperation"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.co-ode.org/ontologies/ont.owl#AR_GetCharge() -->
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#AR_GetCharge()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_Field"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.co-ode.org/ontologies/ont.owl#AR_SetCharge() -->
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#AR_SetCharge()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_Field"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.co-ode.org/ontologies/ont.owl#Fr_ImageVectorGetter() -->
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Fr_ImageVectorGetter()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_Attribute"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.co-ode.org/ontologies/ont.owl#Fr_ImageVectorSetter() -->
+
+<rdf:Description rdf:about="http://www.co-ode.org/ontologies/ont.owl#Fr_ImageVectorSetter()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_Attribute"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Argument_DataTypeMapping -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Argument_DataTypeMapping">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ClientServer"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#BroadCast -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#BroadCast">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceInterfaceType"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ClientServer -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ClientServer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:equivalentClass rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_bindservice()"/>
+	<owl:equivalentClass rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_Method"/>
+	<owl:equivalentClass rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_ClientServerOperation"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Method_Invokation"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#CompositionSWCType -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#CompositionSWCType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Vehicle_OOMediator"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#DataPassing -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#DataPassing">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceInterfaceType"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#DataTypeMapping -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#DataTypeMapping">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#SenderReceiver"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#EventNotification -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#EventNotification">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#PublishSubscribe"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#EventSubscribe -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#EventSubscribe">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#PublishSubscribe"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Input_DataPrototype -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Input_DataPrototype">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Argument_DataTypeMapping"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#DataTypeMapping"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Method_Invokation -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Method_Invokation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceInterfaceType"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Output_DataPrototype -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Output_DataPrototype">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Argument_DataTypeMapping"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#DataTypeMapping"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Parameter_DataTypeMapping -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Parameter_DataTypeMapping">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ClientServer"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Postcondition_compliance -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Postcondition_compliance">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Method_Invokation"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Precondition_compliance -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Precondition_compliance">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Method_Invokation"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#PublishService -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#PublishService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#PublishSubscribe"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#PublishSubscribe -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#PublishSubscribe">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceInterfaceType"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#SenderReceiver -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#SenderReceiver">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#DataPassing"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceInterfaceType -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceInterfaceType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceSWCType"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceSWCType -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceSWCType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:equivalentClass rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_Activity"/>
+	<owl:equivalentClass rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_DisplayProcessedImageComponentPrototype"/>
+	<owl:equivalentClass rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_ChargingManagementCore_SwComponentType"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#CompositionSWCType"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#TimeSynchronization -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#TimeSynchronization">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceInterfaceType"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#TimingGuarantees -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#TimingGuarantees">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#TimingRequirements"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#TimingRequirements -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#TimingRequirements">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#TimeSynchronization"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Vehicle_OOMediator -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#Vehicle_OOMediator">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_Activity -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_Activity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Android_Service_Spec"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ClientBindingClass -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ClientBindingClass">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_IBinder"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_DisplayFaceID -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_DisplayFaceID">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_DisplayFaceImage"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ServiceOutputs"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_DisplayFaceImage -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_DisplayFaceImage">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_DisplayImage"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ServiceOutputs"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_DisplayImage -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_DisplayImage">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ServiceOutputs"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_FaceRecognitionControlService -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_FaceRecognitionControlService">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_Activity"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_IBinder -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_IBinder">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Android_Service_Spec"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ImageCaptureAIModel -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ImageCaptureAIModel">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ServiceInputs"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ImageViewProcessing -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ImageViewProcessing">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ServiceInputs"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ServiceInputs -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ServiceInputs">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_FaceRecognitionControlService"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ServiceOutputs -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ServiceOutputs">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_FaceRecognitionControlService"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_computeCoordinates -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_computeCoordinates">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_FeatureVectorExtraction()"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Android_Service_Spec -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Android_Service_Spec">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ColorCheck() -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ColorCheck()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ImageQualityCheck()"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ComputeFaceID() -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ComputeFaceID()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_OnClick()"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_FeatureVectorExtraction() -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_FeatureVectorExtraction()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_bindservice()"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ImageQualityCheck() -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ImageQualityCheck()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ImageCaptureAIModel"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_OnClick() -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_OnClick()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ImageCaptureAIModel"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ImageViewProcessing"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_OnCreate() -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_OnCreate()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ImageViewProcessing"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_Read_Xcoordinate() -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_Read_Xcoordinate()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_computeCoordinates"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_Read_Ycoordinate() -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_Read_Ycoordinate()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_computeCoordinates"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_StartService() -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_StartService()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_OnClick()"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_X:Coordinate -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_X:Coordinate">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_computeCoordinates"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_bindservice() -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_bindservice()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ClientBindingClass"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_onBind() -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_onBind()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_OnClick()"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_onServiceConnected() -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_onServiceConnected()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ClientBindingClass"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_bindservice()"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_onServiceDisconnected() -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_onServiceDisconnected()">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_ClientBindingClass"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Intent:ACTION_OPEN_DOCUMENT -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Intent:ACTION_OPEN_DOCUMENT">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sangi/ontologies/2021/2/untitled-ontology-7#Andr_StartService()"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_ArgumentDataPrototype -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_ArgumentDataPrototype">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_Method"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_ArgumentMappingType -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_ArgumentMappingType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_ArgumentDataPrototype"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_Attribute -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_Attribute">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_PortInterface"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_BroadcastImage -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_BroadcastImage">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:equivalentClass rdf:nodeID="genid3"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid3">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#equivalence"/>
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#BroadCast"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_BroadcastImage">
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_PortInterface"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_DisplayImage -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_DisplayImage">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_Method"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_DisplayProcessedImageComponentPrototype -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_DisplayProcessedImageComponentPrototype">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_Method -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_Method">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_PortInterface"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_PortInterface -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_PortInterface">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_ServicePortPrototype"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_ProvidedPortPrototype -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_ProvidedPortPrototype">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_ServicePortPrototype"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_REQUEST_NO_RETURN -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_REQUEST_NO_RETURN">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:equivalentClass rdf:nodeID="genid4"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#equivalence"/>
+	<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#FireAndForget"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_REQUEST_NO_RETURN">
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_Method"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_RequiredPortPrototype -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_RequiredPortPrototype">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_ServicePortPrototype"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_ServicePortPrototype -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_ServicePortPrototype">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_DisplayProcessedImageComponentPrototype"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_ArgumentDataPrototype -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_ArgumentDataPrototype">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_ClientServerOperation"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_AutosarDataType -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_AutosarDataType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_LadenCharge_DiagnosticPortInterface"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_ChargingManagementCore_SwComponentType -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_ChargingManagementCore_SwComponentType">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.co-ode.org/ontologies/ont.owl#AR_SWComponentType"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_ClientServerOperation -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_ClientServerOperation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_LadenCharge_DiagnosticPortInterface"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_Events -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_Events">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_LadenCharge_DiagnosticPortInterface"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_VariableDataPrototype"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_Field -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_Field">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_LadenCharge_DiagnosticPortInterface"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_LadenCharge_DiagnosticPortInterface -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_LadenCharge_DiagnosticPortInterface">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:equivalentClass rdf:nodeID="genid5"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#equivalence"/>
+	<owl:someValuesFrom rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ClientServer"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_LadenCharge_DiagnosticPortInterface">
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_PortPrototype"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_LadenCharge_ProvidedPortPrototype -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_LadenCharge_ProvidedPortPrototype">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_PortPrototype"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_LadenCharge_RequiredPortPrototype -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_LadenCharge_RequiredPortPrototype">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_PortPrototype"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_PPortComSpec -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_PPortComSpec">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_LadenCharge_ProvidedPortPrototype"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_PortPrototype -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_PortPrototype">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_ChargingManagementCore_SwComponentType"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_RPortComSpec -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_RPortComSpec">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_LadenCharge_RequiredPortPrototype"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_SenderReceiverInterface -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_SenderReceiverInterface">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_Events"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_TimeSynchronizationInterface -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_TimeSynchronizationInterface">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_LadenCharge_DiagnosticPortInterface"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_TimeSynchronizationMasterInterface -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_TimeSynchronizationMasterInterface">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_TimeSynchronizationInterface"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_TimeSynchronizationPureLocalInterface -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_TimeSynchronizationPureLocalInterface">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_TimeSynchronizationInterface"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_TimeSyynchronizationSlaveInterface -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_TimeSyynchronizationSlaveInterface">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_TimeSynchronizationInterface"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_VariableDataPrototype -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_VariableDataPrototype">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_AutosarDataType"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_fireAndForget -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_fireAndForget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<owl:equivalentClass rdf:nodeID="genid6"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="genid6">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+	<owl:onProperty rdf:resource="http://www.co-ode.org/ontologies/ont.owl#equivalence"/>
+	<owl:someValuesFrom rdf:resource="http://www.co-ode.org/ontologies/ont.owl#FireAndForget"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_fireAndForget">
+	<rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_ClientServerOperation"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Individuals -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#AtomicSWC -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#AtomicSWC">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceSWCType"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceNode -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceNode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceSWCType"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Getter -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Getter">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_Attribute"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Service -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Service">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_PortInterface"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Setter -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Setter">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Fr_Attribute"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#major -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#major">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#minor -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#minor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR:Getter -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR:Getter">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_Field"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR:Notifier -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR:Notifier">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_Field"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR:Request_Response -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR:Request_Response">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_ClientServerOperation"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR:ServiceInterface -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR:ServiceInterface">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_LadenCharge_DiagnosticPortInterface"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR:Setter -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR:Setter">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_Field"/>
+</rdf:Description>
+<!--  -->
+<!-- http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR:fireandForget -->
+
+<rdf:Description rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR:fireandForget">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+	<rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/2/untitled-ontology-23#AR_ClientServerOperation"/>
+</rdf:Description>
+<!--  -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
+</rdf:RDF>

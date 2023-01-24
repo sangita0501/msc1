@@ -1,0 +1,65 @@
+--- # Application configuration - application.yaml
+author: Sangita
+info:
+  description: 
+  version: 
+  title: 
+  license:
+  url: 
+tags:
+  name: 
+  description: 
+components:
+  schemas:
+    InventoryItem:
+      type: object
+      required:
+        - id
+        - name
+        - manufacturer
+        - releaseDate
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: 
+        name:
+          type: string
+          example: 
+        releaseDate:
+          type: 
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'
+        manufacturer:
+          $ref: '#/components/schemas/Manufacturer'
+    Manufacturer:
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          example:  
+paths:
+  LoadedOntologies:
+    get:
+      summary: Get the set of ontologies that were imported by the root ontology when the API was generated.
+      parameters: []
+      responses:
+        200:
+          description: A list of ontologies used to generate this API. Note that while the prefix names used here correspond with the ones given in the JSON-LD @context for the supported data types, the prefix mapping in the API is based on the Ontology IRIs given in those @context blocks, which may differ from the values given here (which give priority to version IRIs).
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                - ''
+                properties:
+                  '':
+                    type: string
+                    format: uri
+                    enum:
+                  
+    
+ 
+ 
+ 

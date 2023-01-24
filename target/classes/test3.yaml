@@ -1,0 +1,27 @@
+{info: 'null
+
+    ', '  title': 'VehicleOntologyChoreography
+
+    ', '  licence': 'Apache2.0
+
+    ', '  nameofthecomponent': 'HeatingDisplay
+
+    ', '  url': 'http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatingDisplay
+
+    ', '  description': AUTOSAR_Adaptiveframework, '  version': '1.0.0
+
+    ', components: 'null
+
+    ', '  attributes': 'null
+
+    ', '    methods': 'HeatingTempRecorddata
+
+    ', '      name': 'http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatingTempRecorddata
+
+    ', '      description': 'RPC based Sender-Receiver
+
+    ', '      schema': 'null
+
+    ', '      in': 'null
+
+    '}

@@ -1,0 +1,66 @@
+info:
+  title: 
+  license:
+  nameofthecomponent: 
+  url: https://opensource.org/licenses/MIT
+  description: The documentation below is automatically extracted from a <dc:description> annotation on the ontology https://w3id.org/rec/core/:<br/><br/>*The REC core module collects the top-level classes and properties that span over or are reused within multiple REC modules.<br/><br/>Note that this module reuses certain classes, properties, and named individuals from other vocabularies, e.g., GeoSPARQL; the copyright conditions on those reused entities are stated in their respective rdfs:comments annotations.*
+  version: "3.0"
+components:
+  attributes:
+    methods:
+      name: 
+      description: 
+      schema:
+        type: integer
+        format: int32
+        minimum: 1
+        default: 1
+      in: query
+    sizeParam:
+      name: size
+      description: 
+      schema:
+        type: integer
+        format: int32
+        maximum: 100
+        default: 20
+      in: query
+    sortParam:
+      name: sort
+      description: The field and direction to sort results on.
+      schema:
+        $ref: '#/components/schemas/SortingSchema'
+      style: deepObject
+      in: query
+  schemas:
+    HydraCollectionWrapper:
+      type: object
+      required:
+      - '@context'
+      - '@type'
+      - hydra:member
+      properties:
+        '@context':
+          $ref: '#/components/schemas/Context'
+        '@type':
+          type: string
+          default: hydra:Collection
+        hydra:totalItems:
+          type: integer
+        hydra:view:
+          type: object
+          properties:
+            '@id':
+              type: string
+              format: uri
+            '@type':
+              type: string
+              default: hydra:PartialCollectionView
+            hydra:first:
+              type: string
+            hydra:previous:
+              type: string
+            hydra:next:
+              type: string
+            hydra:last:
+              

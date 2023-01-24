@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#"
+     xml:base="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-49="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-32#version -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-32#version">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FPortInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FArgumentDataPrototype -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FArgumentDataPrototype">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FArgumentMappingType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FArgumentMappingType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FArgumentDataPrototype"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FAttribute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FAttribute">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FPortInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FBroadcast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FBroadcast">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FPortInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FComponentPrototype -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FComponentPrototype">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FCompositionComponentPrototype"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FCompositionComponentPrototype -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FCompositionComponentPrototype">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#system_Template"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FMethod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FPortInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FNORMAL_METHOD -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FNORMAL_METHOD">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FPortInterface -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FPortInterface">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FPortPrototype"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FPortPrototype -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FPortPrototype">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FComponentPrototype"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FProvidedPortPrototype -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FProvidedPortPrototype">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FPortPrototype"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FREQUEST_NO_RETURN -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FREQUEST_NO_RETURN">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FRequiredPortPrototype -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FRequiredPortPrototype">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FPortPrototype"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#system_Template -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#system_Template"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Getter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Getter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FAttribute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Service -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Service">
+        <rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FPortInterface"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Setter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#Setter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#FAttribute"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#major -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#major">
+        <rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-32#version"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#minor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-49#minor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/uids2837/ontologies/2020/0/untitled-ontology-32#version"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

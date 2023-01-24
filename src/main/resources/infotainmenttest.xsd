@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:Franca="Infotainment" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="Infotainment">
+	
+	<xsd:element name="FCompositionComponentPrototype" type="Franca:FCompositionComponentPrototype" abstract="true"/>
+	<xsd:element name="FComponentPrototype" type="Franca:FComponentPrototype" abstract="true"/>
+	<xsd:element name="FPortInterface" type="Franca:FPortInterface" abstract="true"/>
+	<xsd:element name="FPortPrototype" type="Franca:FPortPrototype" abstract="true"/>
+	<xsd:element name="FServiceComponentPrototype" type="Franca:FServiceComponentPrototype" abstract="true"/>
+	<xsd:element name="FProvidedPort" type="Franca:FProvidedPort" abstract="true"/>
+	<xsd:element name="FRequiredPort" type="Franca:FRequiredPort" abstract="true"/>
+	<xsd:element name="FMethod" type="Franca:FMethod" abstract="true"/>
+	<xsd:element name="FBroadcast" type="Franca:FBroadcast" abstract="true"/>
+	<xsd:element name="FAttribute" type="Franca:FAttribute" abstract="true"/>
+	<xsd:complexType name="FCompositionComponentPrototype">
+		<xsd:sequence>
+			<xsd:element name="Component" type="Franca:FComponentPrototype" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="FComponentPrototype">
+		<xsd:sequence>
+			<xsd:element name="Port" type="Franca:FPortPrototype" minOccurs="0"/>
+			
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="FPortInterface" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="Franca:FAttribute">
+				<xsd:attribute name="Fversion_major" xml:base="VariableDataPrototype" use="required"/>
+				<xsd:attribute name="Fversion_minor" xml:base="VariableDataPrototype" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="FPortPrototype">
+		<xsd:attribute name="Interface" type="xsd:anyURI" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="FServiceComponentPrototype" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="Franca:FComponentPrototype"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:simpleType name="VariableDataPrototype" xml:base="Int" final="list">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:complexType name="FProvidedPort" xml:base="PPort" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="Franca:FPortPrototype">
+				<xsd:attribute name="Portinterfacespec" xml:base="FPortPrototype" use="required"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="FRequiredPort" xml:base="RPort" abstract="true">
+		<xsd:complexContent>
+			<xsd:extension base="Franca:FPortPrototype"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="FMethod">
+		<xsd:annotation>
+			<xsd:appinfo source="http://www.eclipse.org/emf/2002/Ecore" >
+				<operation name="ClientServerOperation" type="ecore:EOperation"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+		<xsd:attribute name="FFireForgetMethod" type="Franca:VariableDataPrototype" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="FBroadcast">
+		<xsd:attribute name="FProvDataElementsInterface" type="Franca:VariableDataPrototype" use="required"/>
+	</xsd:complexType>
+	<xsd:simpleType name="FArgumentDataPrototype" xml:base="Int" final="list">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:complexType name="FAttribute">
+		<xsd:annotation>
+			<xsd:appinfo source="http://www.eclipse.org/emf/2002/Ecore" >
+				<operation name="Getter" type="ecore:EJavaObject"/>
+				<operation name="Setter" type="ecore:EJavaObject"/>
+			</xsd:appinfo>
+		</xsd:annotation>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,230 @@
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Argument_DataTypeMapping>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#AtomicNode>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Attributes>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#BroadCast>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ClientServer>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#CompositionMasterNode>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#CompositionSWCType>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#DataPassing>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#DataTypeMapping>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#EventNotification>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#EventSubscribe>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#FCompositionComponentPrototype>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#FServiceComponentPrototype>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#GetHeatTempFromSensor_RequiredPortPrototype>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_GET>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Methods>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_POST>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Request>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Response>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatSensingDisplay>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatTempDisplay>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Input_DataPrototype>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Method_Invokation>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Output_DataPrototype>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Postcondition_compliance>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Precondition_compliance>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#PublishService>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#PublishSubscribe>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SWCPortPrototypes>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SenderReceiver>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceGrounding>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceInterfaceType>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimeSynchronization>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimingGuarantees>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimingRequirements>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#VehicleServices_Choreography>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Vehicle_OOMediator>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#owl:incompatibleWith>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#owl:iscompatibleWith>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#owl:semanticsimilar>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#AtomicSWC>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceNode>))
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Argument_DataTypeMapping> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Argument_DataTypeMapping>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Argument_DataTypeMapping> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ClientServer>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#AtomicNode> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#AtomicNode>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#AtomicNode> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Attributes> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Attributes>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Attributes> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Method_Invokation>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#BroadCast> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#BroadCast>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#BroadCast> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceInterfaceType>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ClientServer> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ClientServer>)
+
+EquivalentClasses(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ClientServer> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatTempDisplay>)
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ClientServer> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Method_Invokation>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#CompositionMasterNode> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#CompositionMasterNode>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#CompositionMasterNode> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#CompositionSWCType>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#CompositionSWCType> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#CompositionSWCType>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#CompositionSWCType> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Vehicle_OOMediator>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#DataPassing> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#DataPassing>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#DataPassing> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceInterfaceType>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#DataTypeMapping> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#DataTypeMapping>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#DataTypeMapping> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SenderReceiver>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#EventNotification> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#EventNotification>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#EventNotification> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#PublishSubscribe>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#EventSubscribe> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#EventSubscribe>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#EventSubscribe> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#PublishSubscribe>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#FCompositionComponentPrototype> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#FCompositionComponentPrototype>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#FCompositionComponentPrototype> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#CompositionSWCType>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#FServiceComponentPrototype> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#FServiceComponentPrototype>)
+
+EquivalentClasses(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#FServiceComponentPrototype> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType>)
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#FServiceComponentPrototype> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#GetHeatTempFromSensor_RequiredPortPrototype> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#GetHeatTempFromSensor_RequiredPortPrototype>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#GetHeatTempFromSensor_RequiredPortPrototype> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SWCPortPrototypes>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_GET> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_GET>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_GET> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Methods>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Methods> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Methods>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Methods> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceInterfaceType>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_POST> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_POST>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_POST> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Methods>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Request> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Request>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Request> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_GET>)
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Request> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_POST>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Response> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Response>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Response> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_GET>)
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Response> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_POST>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatSensingDisplay> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatSensingDisplay>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatSensingDisplay> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatTempDisplay> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatTempDisplay>)
+
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatTempDisplay> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ClientServer>)
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatTempDisplay> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#GetHeatTempFromSensor_RequiredPortPrototype>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Input_DataPrototype> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Input_DataPrototype>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Input_DataPrototype> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Argument_DataTypeMapping>)
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Input_DataPrototype> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#DataTypeMapping>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Method_Invokation> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Method_Invokation>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Method_Invokation> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceInterfaceType>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Output_DataPrototype> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Output_DataPrototype>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Output_DataPrototype> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Argument_DataTypeMapping>)
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Output_DataPrototype> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#DataTypeMapping>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Postcondition_compliance> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Postcondition_compliance>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Postcondition_compliance> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Method_Invokation>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Precondition_compliance> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Precondition_compliance>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Precondition_compliance> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Method_Invokation>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#PublishService> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#PublishService>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#PublishService> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#PublishSubscribe>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#PublishSubscribe> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#PublishSubscribe>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#PublishSubscribe> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceInterfaceType>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SWCPortPrototypes> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SWCPortPrototypes>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SWCPortPrototypes> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SenderReceiver> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SenderReceiver>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SenderReceiver> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#DataPassing>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceGrounding> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceGrounding>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceGrounding> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceInterfaceType> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceInterfaceType>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceInterfaceType> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceGrounding>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#CompositionSWCType>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimeSynchronization> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimeSynchronization>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimeSynchronization> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceInterfaceType>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimingGuarantees> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimingGuarantees>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimingGuarantees> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimingRequirements>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimingRequirements> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimingRequirements>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimingRequirements> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimeSynchronization>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Vehicle_OOMediator> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Vehicle_OOMediator>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Vehicle_OOMediator> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#VehicleServices_Choreography>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#AtomicSWC> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#AtomicSWC>)
+
+ClassAssertion(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#AtomicSWC>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#owl:incompatibleWith> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#AtomicSWC> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceNode>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#owl:iscompatibleWith> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#AtomicSWC> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceNode>)
+ObjectPropertyAssertion(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#owl:semanticsimilar> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#AtomicSWC> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceNode>)
+
+# Individual: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceNode> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceNode>)
+
+ClassAssertion(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceNode>)
+
+
+)
