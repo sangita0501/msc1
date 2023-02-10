@@ -120,7 +120,7 @@ import sun.rmi.runtime.Log;
 
 
 public class ONTCHOREOGRAPHER {
-
+//Class for Ontology orchestration
 	private static Collection<?> properties;
 
 	@SuppressWarnings("deprecation")
