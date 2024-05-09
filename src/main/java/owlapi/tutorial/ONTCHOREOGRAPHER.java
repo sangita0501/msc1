@@ -54,6 +54,7 @@ import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLDataProperty;
+import org.semanticweb.owlapi.model.OWLDataPropertyAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLDeclarationAxiom;
 import org.semanticweb.owlapi.model.OWLDocumentFormat;
 import org.semanticweb.owlapi.model.OWLEntity;
@@ -121,9 +122,10 @@ import sun.rmi.runtime.Log;
 
 public class ONTCHOREOGRAPHER {
 //Class for Ontology orchestration
-	private static Collection<?> properties;
+private static Collection<?> propertiesCollection;
+	
 
-	@SuppressWarnings("deprecation")
+@SuppressWarnings("deprecation")
 public static void main(String[] args) throws OWLOntologyStorageException, JsonMappingException,JsonParseException,IOException {
 OWLOntologyManager man = OWLManager.createOWLOntologyManager();
 File fileout = new File("C:\\Backup_uids2837_from_C_Drive\\uids2837\\eclipse-workspace_testprotege\\test_mediator.owl");
@@ -214,6 +216,13 @@ OWLObjectPropertyAssertionAxiom assertion1 = df5.getOWLObjectPropertyAssertionAx
 OWLObjectProperty isncompatible = df5.getOWLObjectProperty(iri1 + "#owl:incompatibleWith");
 OWLObjectPropertyAssertionAxiom assertion2 = df5.getOWLObjectPropertyAssertionAxiom(isncompatible, AtomicSWCType, NodesType);
 
+//Define Data Property between Individuals
+OWLDataProperty hastype = df5.getOWLDataProperty(iri1 + "#owl:hastype");
+OWLDataPropertyAssertionAxiom assertion11 = df5.getOWLDataPropertyAssertionAxiom(hastype, AtomicSWCType, false);
+
+//Define Data Property between Individuals
+OWLDataProperty semantictype = df5.getOWLDataProperty(iri1 + "#owl:semantictype");
+OWLDataPropertyAssertionAxiom assertion12 = df5.getOWLDataPropertyAssertionAxiom(semantictype, AtomicSWCType, false);
 
 //Finally, add the axiom to our Ontology and save
 AddAxiom addAxiomChange = new AddAxiom(userOntology, assertion);
@@ -221,6 +230,10 @@ man.applyChange(addAxiomChange);
 AddAxiom addAxiomChange1 = new AddAxiom(userOntology, assertion1);
 man.applyChange(addAxiomChange1);
 AddAxiom addAxiomChange2 = new AddAxiom(userOntology, assertion2);
+man.applyChange(addAxiomChange2);
+AddAxiom addAxiomChange3 = new AddAxiom(userOntology, assertion11);
+man.applyChange(addAxiomChange1);
+AddAxiom addAxiomChange4 = new AddAxiom(userOntology, assertion12);
 man.applyChange(addAxiomChange2);
 
 //+++++++++
@@ -423,9 +436,6 @@ System.out.println(" \t--SuperClasses--:");
 r.getSuperClasses(df5.getOWLClass("http://www.semanticweb.org/owlapi/ontologies/ontology#VehicleServie_Ontology#ServiceSWCType"), false).forEach(System.out::println);;
 
 
-
-
-
 //Load and Merge an Ontology 
 
 File file7 = new File("C:\\Backup_from_D_Drive\\DSUsers\\uids2837\\model\\franca1.owl");
@@ -433,9 +443,6 @@ IRI testiri= IRI.create("http://www.semanticweb.org/uids2837/ontologies/2020/0/u
 //OWLOntology o1= man.loadOntologyFromOntologyDocument(testiri);
 
 //man.saveOntology(o1,new FunctionalSyntaxDocumentFormat(), new FileOutputStream(fileout));
-
-
-
 
 OWLOntologyMerger merger = new OWLOntologyMerger(man);
 IRI mergedontology = IRI.create("C:\\Backup_uids2837_from_C_Drive\\uids2837\\eclipse-workspace_testprotege\\mergetest.owl");
@@ -633,9 +640,9 @@ double[] Metr_ROS_AR = {30,35,77.78};
 
 //Threshold Evaluation for API Reusability and semantic Compatibility based on Practical Analysis of evaluated Metrics and considered the centre value for the distribution Ranges for any given metric. Also,considering False Positives and negatives in case of Distribution Range overlaps
 
-double SSS_THR = 25;
-double IRR_THR = 35;
-double CIC_THR = 50;
+double SSS_THR = 26.5;
+double IRR_THR = 36.3;
+double CIC_THR = 65;
 
 System.out.format("+-----------------+---------------------+--------+------+-----+%n");
 System.out.format("| Framework_ID    | Name_FW_SWC_API     |  SSS   | IRR  | CIC |%n");
@@ -670,9 +677,11 @@ System.out.println("!!!!If S-Distribution and N-Distribution intervals doesn't O
 //++++++
 //Based on determined threshold value for each similarity metric , determine the semantic interoperability
 System.out.println("//////////////////////////////////////////////////////////////////");
-System.out.println("The Threshold Range {max,min}for Schema Semantic Similarity Metric(SSS)for the above frameworks: ");
+
+/*System.out.println("The Threshold Range {max,min}for Schema Semantic Similarity Metric(SSS)for the above frameworks: ");
 System.out.println("The Threshold Range {max,min}for Schema Semantic Similarity Metric(IRR)for the above frameworks: ");
-System.out.println("The Threshold Range {max,min}for Schema Semantic Similarity Metric()for the above frameworks: ");
+System.out.println("The Threshold Range {max,min}for Schema Semantic Similarity Metric(CIC)for the above frameworks: ");
+*/
 System.out.println("The Optimum Threshold Value for Schema Semantic Similarity Metric(SSS): ");
 System.out.println (SSS_THR);
 System.out.println("The Optimum Threshold Value for Instance Relationship Richness Metric(IRR): ");
@@ -683,23 +692,36 @@ System.out.println("////////////////////////////////////////////////////////////
 
 
 
-Scanner sc10= new Scanner(System.in);
+for (int k=1; k < 6; k++)
+{
 System.out.println("Are there any more components to be entered to Standard Ontology Template? ");
 System.out.println("++++ Please Enter the digit 1. Yes 2. No : ++++");
-Integer str_class3= sc10.nextInt();
-if (str_class3 == 1) 
-{
 
+Scanner sc10= new Scanner(System.in);
+Integer str_class3= sc10.nextInt();
+
+	
+	if (str_class3==1)
+	{
+	/*
+do 
+{
+	System.out.println("##### Invalid Entry#######");
+	System.out.println("++++ Please Enter the digit 1. Yes 2. No : ++++");
+	Integer str_class31= sc10.nextInt();
+}while (str_class3 == 0 || str_class3 >= 2);
+*/
 //************Loop for for multiple SWC APIsbspecification*********************
 System.out.println("*********  User Choice Components Entry Section ********");
 Scanner fwsc =new Scanner(System.in);
 Scanner sc1= new Scanner(System.in);
-System.out.println("Enter the number of SWCs whose APIs to be specified in generic template in digits (1...9): ");
+System.out.println("Enter the number of SWCs whose APIs to be specified in generic template in digits (1...5): ");
 Integer intswc= sc1.nextInt();
 System.out.println("**** Service Sowftware Component API Specifications*****");
 int i= 1;
 int arr[]= null;
-
+if (intswc >= 1 && intswc<=5) 
+{
 do {
 //for (int i= 1; i<= intswc; i++) {
 	
@@ -775,7 +797,7 @@ man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOut
 //+++++++
 
 Scanner sc3= new Scanner(System.in);
-System.out.println("Enter the number for the respective Communication Paradigm: \n 1. REST  \n 2. RPC  \n 3. Event-Based");
+System.out.println("Enter the number for the respective Communication Paradigm: \n 1. REST  \n 2. RPC ");
 Integer str_class1= sc3.nextInt();
 
 if ((fwsc_class==1) || (fwsc_class==2) || (fwsc_class==3)|| (fwsc_class== 4))
@@ -948,15 +970,19 @@ if(str_class1==2)
 				
 			    
 			    OWLAxiom b = df5.getOWLSubObjectPropertyOfAxiom(issimilar, iscompatible); 
-				OWLAxiom c = df5.getOWLEquivalentObjectPropertiesAxiom(issimilar, iscompatible);
-			//	OWLObjectProperty c = df5.getOWLObjectOneOf(str_class6);	
+			    OWLAxiom e = df5.getOWLSubDataPropertyOfAxiom(semantictype, hastype);
+			    OWLAxiom c = df5.getOWLEquivalentObjectPropertiesAxiom(issimilar, iscompatible);
+			    OWLAxiom f = df5.getOWLEquivalentDataPropertiesAxiom(semantictype, hastype);
+				//	OWLObjectProperty c = df5.getOWLObjectOneOf(str_class6);	
 				OWLClassAssertionAxiom ax5 = df5.getOWLClassAssertionAxiom(SWCUserInterType, servinst);
 				man.addAxiom(userOntology, ax5);
 				OWLObjectPropertyAssertionAxiom assertion6 = df5.getOWLObjectPropertyAssertionAxiom(issimilar, servinst,AtomicSWCType);
-				AddAxiom addAxiomChange3 = new AddAxiom(userOntology, assertion6);
-				AddAxiom addAxiomChange4 = new AddAxiom(userOntology, c);
-				man.applyChange(addAxiomChange3);
-				man.applyChange(addAxiomChange4);
+				AddAxiom addAxiomChange5 = new AddAxiom(userOntology, assertion6);
+				AddAxiom addAxiomChange6 = new AddAxiom(userOntology, c);
+				AddAxiom addAxiomChange7 = new AddAxiom(userOntology, f);
+				man.applyChange(addAxiomChange5);
+				man.applyChange(addAxiomChange6);
+				man.applyChange(addAxiomChange7);
 				}
 			    }
 				else
@@ -1019,6 +1045,9 @@ if(str_class1==2)
 		
 		
 		}
+		
+		if (mydata.containsKey("schemas")){
+			dataMap1.put("type", "object" );	
 
 		FileWriter writer = new FileWriter(myfilename);
 		yaml1.dump( dataMap1, writer );
@@ -1028,29 +1057,29 @@ if(str_class1==2)
 			
 	}
 	else {
-		Scanner sc5= new Scanner(System.in);
+		Scanner sc9= new Scanner(System.in);
 		System.out.println("Enter the name for the Service Interface RPC Method: ");
-		String str_class4= sc5.nextLine();
+		String str_class9= sc9.nextLine();
 		
-		OWLClass SWCUserInterType = df5.getOWLClass(iri1+"#"+str_class4);
-		OWLSubClassOfAxiom w_sub_p226 = df5.getOWLSubClassOfAxiom(SWCUserInterType, Interfacesubtype_ClientServer);
+		OWLClass SWCUserInterType11 = df5.getOWLClass(iri1+"#"+str_class9);
+		OWLSubClassOfAxiom w_sub_p226 = df5.getOWLSubClassOfAxiom(SWCUserInterType11, Interfacesubtype_ClientServer);
 		userOntology.add(w_sub_p226);
 		
 		System.out.println("Method Successfully created!");
 		man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 		
-		Scanner sc15= new Scanner(System.in);
+		Scanner sc16= new Scanner(System.in);
 		System.out.println("Is this Service Method to be defined for 1. Provided OR 2. Required Service Ports.Please enter the corresponding didit(1/2)? ");
-		Integer str_class5= sc15.nextInt();
+		Integer str_class6= sc16.nextInt();
 		
 		if(str_class5==1) {
 
 							
 				Scanner sc2= new Scanner(System.in);
 				System.out.println(" Enter The name of the Provided Service Port Name one at a time:");
-				String str_class6= sc2.nextLine();
+				String str_class7= sc2.nextLine();
 
-				OWLClass SWCportprototype = df5.getOWLClass(iri1+"#"+ str_class6+ "_ProvidedPortPrototype");
+				OWLClass SWCportprototype = df5.getOWLClass(iri1+"#"+ str_class7+ "_ProvidedPortPrototype");
 				OWLSubClassOfAxiom w_sub_p256 = df5.getOWLSubClassOfAxiom(SWCportprototype,SWCtypeporttype);
 				userOntology.add(w_sub_p256);
 
@@ -1159,10 +1188,10 @@ if(str_class1==2)
 		}
 		
 		//+++ Define Number of Service Instances
-		Scanner sc11= new Scanner(System.in);
+		Scanner sc14= new Scanner(System.in);
 		System.out.println("Does the Service Method has Service Instances:1. Yes 2. No?");
-	    Integer str_chck = sc11.nextInt();
-	    if (str_chck == 1) {
+	    Integer str_chck1 = sc14.nextInt();
+	    if (str_chck1 == 1) {
 	    
 	    Scanner sc12= new Scanner(System.in);
 		System.out.println("Enter the number of Service Instances: ");
@@ -1171,8 +1200,8 @@ if(str_class1==2)
 		{	
 	    Scanner sc7= new Scanner(System.in);
 		System.out.println("Enter the name Service Instances: ");
-		String str_class6= sc7.nextLine();
-		OWLIndividual servinst = df5.getOWLNamedIndividual(iri1 + "#"+ str_class6);
+		String str_class16= sc7.nextLine();
+		OWLIndividual servinst = df5.getOWLNamedIndividual(iri1 + "#"+ str_class16);
 		
 	    
 	    OWLAxiom b = df5.getOWLSubObjectPropertyOfAxiom(issimilar, iscompatible); 
@@ -1181,10 +1210,10 @@ if(str_class1==2)
 		OWLClassAssertionAxiom ax5 = df5.getOWLClassAssertionAxiom(SWCUserInterType, servinst);
 		man.addAxiom(userOntology, ax5);
 		OWLObjectPropertyAssertionAxiom assertion6 = df5.getOWLObjectPropertyAssertionAxiom(issimilar, servinst,AtomicSWCType);
-		AddAxiom addAxiomChange3 = new AddAxiom(userOntology, assertion6);
-		AddAxiom addAxiomChange4 = new AddAxiom(userOntology, c);
-		man.applyChange(addAxiomChange3);
-		man.applyChange(addAxiomChange4);
+		AddAxiom addAxiomChange7 = new AddAxiom(userOntology, assertion6);
+		AddAxiom addAxiomChange8 = new AddAxiom(userOntology, c);
+		man.applyChange(addAxiomChange7);
+		man.applyChange(addAxiomChange8);
 		}
 	    }
 		else
@@ -1193,36 +1222,36 @@ if(str_class1==2)
 	    }
 	    
 	  //++++++ YAML MAPPINGs!!
-	  		final String myfilename = "C:/Backup_uids2837_from_C_Drive/uids2837/eclipse-workspace_testprotege/msc1/src/main/resources/test4.yaml";
-	  		InputStream myinputfile = new FileInputStream(new File("src/main/resources/test1.yaml"));
+	  		final String myfilename1 = "C:/Backup_uids2837_from_C_Drive/uids2837/eclipse-workspace_testprotege/msc1/src/main/resources/test4.yaml";
+	  		InputStream myinputfile1 = new FileInputStream(new File("src/main/resources/test1.yaml"));
 	  		System.out.println("***YAML***");
 	  		System.out.println("***++++++++***");
-	  		Yaml yaml1 = new Yaml();
+	  		Yaml yaml11 = new Yaml();
 	  		@SuppressWarnings("unchecked")
-	  		Map<String, Object> mydata = (Map<String, Object>) yaml1.load(myinputfile);
+	  		Map<String, Object> mydata1 = (Map<String, Object>) yaml1.load(myinputfile);
 	  		System.out.println(mydata);
 
 	  		//find a key in the input stream
 
-	  		Map<String, Object> dataMap1 = new LinkedHashMap<>();
-	  		String str1= null;
-	  		String str2 = "VehicleOntologyChoreography";
-	  		String str3 = "Apache2.0" ;
-	  		String str4 = str_class;
-	  		String str5 = ""+iri1+"#"+str4 ;
-	  		String str6= "Generic API Mocking";
-	  		String str7= "1.0.0";
-	  		String str8= "\n";
+	  		Map<String, Object> dataMap21 = new LinkedHashMap<>();
+	  		String str21= null;
+	  		String str22 = "VehicleOntologyChoreography";
+	  		String str23 = "Apache2.0" ;
+	  		String str24 = str_class;
+	  		String str25 = ""+iri1+"#"+str4 ;
+	  		String str26= "Generic API Mocking";
+	  		String str27= "1.0.0";
+	  		String str28= "\n";
 
 	  		//Separate indentation levels data mapping
 	  		if(mydata.containsKey("info")){
-	  		dataMap1.put("info", str1+str8 );
-	  		dataMap1.put("  title",str2+str8 );
-	  		dataMap1.put("  licence", str3+str8 );
+	  		dataMap1.put("info", str21+str8 );
+	  		dataMap1.put("  title",str22+str8 );
+	  		dataMap1.put("  licence", str23+str8 );
 	  		dataMap1.put("  nameofthecomponent", str_class+str8 );
-	  		dataMap1.put("  url", str5+str8);
+	  		dataMap1.put("  url", str25+str8);
 	  		dataMap1.put("  description", "AUTOSAR_Adaptive" + "framework");
-	  		dataMap1.put("  version", str7+str8 );
+	  		dataMap1.put("  version", str27+str8 );
 
 
 	  		if (mydata.containsKey("components")){
@@ -1602,8 +1631,12 @@ man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOut
 
 i++;
 }
-
-while (i<= intswc && i>=1);
+}
+while (i<= intswc);
+}
+else {
+	System.out.println("INVALID ENTRY ENTERED!");
+}
 
 //+++++++++++++++++++++++++++++++++INTER_GROUP Semantic Matching+++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -1619,7 +1652,7 @@ System.out.println("Finished!");
 
 //ObjectMapper objectMapper = new YAMLMapper();
 
-}
+
 
 //++++++
 //Display number of Subclasses to infer equivalence SWRL rule
@@ -1662,11 +1695,18 @@ class DLQueryEngine {
         this.reasoner = reasoner;
         parser = new DLQueryParser();
     }
-    
-    public Set<OWLClass> getEquivalentClasses(String classExpressionString) {
+  
+   public Set<OWLClass> getEquivalentClasses(String classExpressionString) {
         if (classExpressionString.trim().length() == 0) {
-            return Collections.emptySet();
+            System.out.println(" \t**-- No EquivalentClasses to display--**:");
+            Node<OWLClass> equivalentClasses1 = reasoner.getEquivalentClasses(Interfacesubtype_httpmethodcall); 
+            Set<OWLClass> result = null;
+            result = equivalentClasses1.getEntities();
+            return result;
+
         }
+        else {
+        
         OWLClassExpression classExpression = parser
                 .parseClassExpression(classExpressionString);
         
@@ -1679,39 +1719,36 @@ class DLQueryEngine {
         Set<OWLClass> result = null;
         if (classExpression.isAnonymous()) {
             result = equivalentClasses.getEntities();
-        } else {
+            return result;
+        } 
+        else {
             result = equivalentClasses.getEntitiesMinus(classExpression.asOWLClass());
+            return result;
         }
-        if (classExpression.isAnonymous()) {
-            result = equivalentClasses1.getEntities();
-        } else {
-            result = equivalentClasses1.getEntitiesMinus(classExpression.asOWLClass());
+        }       
+       
         }
-        return result;
-        }
+        
 }
 
-//++++XSD Parser+++++//
-
-
-
-//}
-
-} catch (OWLOntologyCreationException e) {
+}
+	else if(str_class3==2){
+		System.out.println("YOU HAVE NO MORE SOFTWARE COMPONENTS TO BE SPECIFIED IN STANDARD ONTOLOGY TEMPLATE!!");
+	}
+	else {
+		System.out.println("You made an Invalid Choice,Please REENTER!!");
+	}
+	
+}
+}
+   catch (OWLOntologyCreationException e) {
 	System.out.println("You made an Invalid Choice!!");
-e.printStackTrace();
+	e.printStackTrace();
+}
 }
 }
 
-	private static void elseif(boolean b) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
-	private static void elseif() {
-		// TODO Auto-generated method stub
-		
-	}
-}
 
 

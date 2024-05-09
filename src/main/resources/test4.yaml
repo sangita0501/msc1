@@ -1,29 +1,19 @@
-{info: 'null
+info: 
+   title: VehicleOntologyChoreography
+   licence: Apache2.0
+   nameofthecomponent: DoorSensingControl
+   url: http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#DoorSensingControl
+   description: AUTOSAR_Adaptiveframework
+   version: 1.0.0
+   components: 
+    attributes: 
+      methods: ReadUserImage
+      provided: ReadUserImage
+      name: http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ReadUserImage
+      description: RPC based Client_Receiver
+      schema: null
+      in: null
+    schemas:
+      type: object
 
-    ', '  title': 'VehicleOntologyChoreography
-
-    ', '  licence': 'Apache2.0
-
-    ', '  nameofthecomponent': 'SeatHeatDisplay
-
-    ', '  url': 'http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatDisplay
-
-    ', '  description': AUTOSAR_Adaptiveframework, '  version': '1.0.0
-
-    ', components: 'null
-
-    ', '  attributes': 'null
-
-    ', '    methods': 'HeatTemperatureDisplay
-
-    ', '    required': 'HeatTemperatureDisplay
-
-    ', '      name': 'http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatTemperatureDisplay
-
-    ', '      description': 'RPC based Client_Receiver
-
-    ', '      schema': 'null
-
-    ', '      in': 'null
-
-    '}
+    

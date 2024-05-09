@@ -24,7 +24,6 @@ Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/Vehicle
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_POST>))
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Request>))
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Response>))
-Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatTemperatureDisplay>))
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Input_DataPrototype>))
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Method_Invokation>))
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Output_DataPrototype>))
@@ -33,11 +32,6 @@ Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/Vehicle
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#PublishService>))
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#PublishSubscribe>))
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SWCPortPrototypes>))
-Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatActuateData_RequiredPortPrototype>))
-Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatDisplay>))
-Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatingControl>))
-Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatmeasurement>))
-Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatSensorData_ProvidedPortPrototype>))
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SenderReceiver>))
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceGrounding>))
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceInterfaceType>))
@@ -75,8 +69,6 @@ SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_
 
 # Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ClientServer> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ClientServer>)
 
-EquivalentClasses(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ClientServer> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatTemperatureDisplay>)
-EquivalentClasses(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ClientServer> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatmeasurement>)
 SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ClientServer> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Method_Invokation>)
 
 # Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#CompositionMasterNode> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#CompositionMasterNode>)
@@ -134,12 +126,6 @@ SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_
 SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Response> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_GET>)
 SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_Response> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HTTP_POST>)
 
-# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatTemperatureDisplay> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatTemperatureDisplay>)
-
-
-SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatTemperatureDisplay> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ClientServer>)
-SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#HeatTemperatureDisplay> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatActuateData_RequiredPortPrototype>)
-
 # Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Input_DataPrototype> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Input_DataPrototype>)
 
 SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Input_DataPrototype> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Argument_DataTypeMapping>)
@@ -173,27 +159,6 @@ SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_
 # Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SWCPortPrototypes> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SWCPortPrototypes>)
 
 SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SWCPortPrototypes> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType>)
-
-# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatActuateData_RequiredPortPrototype> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatActuateData_RequiredPortPrototype>)
-
-SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatActuateData_RequiredPortPrototype> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SWCPortPrototypes>)
-
-# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatDisplay> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatDisplay>)
-
-SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatDisplay> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType>)
-
-# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatingControl> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatingControl>)
-
-SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatingControl> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType>)
-
-# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatmeasurement> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatmeasurement>)
-
-SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatmeasurement> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ClientServer>)
-SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatHeatmeasurement> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatSensorData_ProvidedPortPrototype>)
-
-# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatSensorData_ProvidedPortPrototype> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatSensorData_ProvidedPortPrototype>)
-
-SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeatSensorData_ProvidedPortPrototype> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SWCPortPrototypes>)
 
 # Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SenderReceiver> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SenderReceiver>)
 
