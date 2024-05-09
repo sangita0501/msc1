@@ -1,0 +1,29 @@
+{info: 'null
+
+    ', '  title': 'VehicleOntologyChoreography
+
+    ', '  licence': 'Apache2.0
+
+    ', '  nameofthecomponent': 'SeaTSensor
+
+    ', '  url': 'http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeaTSensor
+
+    ', '  description': AUTOSAR_Adaptiveframework, '  version': '1.0.0
+
+    ', components: 'null
+
+    ', '  attributes': 'null
+
+    ', '    events': 'Seatsensing
+
+    ', '    published': 'Seatsensing
+
+    ', '      name': 'http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Seatsensing
+
+    ', '      description': 'REST based HTTP_Method
+
+    ', '      schema': 'null
+
+    ', '      in': 'null
+
+    '}
