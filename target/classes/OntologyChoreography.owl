@@ -35,6 +35,7 @@ Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/Vehicle
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SenderReceiver>))
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceGrounding>))
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceInterfaceType>))
+Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceRegistry>))
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType>))
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimeSynchronization>))
 Declaration(Class(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#TimingGuarantees>))
@@ -171,6 +172,10 @@ SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_
 # Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceInterfaceType> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceInterfaceType>)
 
 SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceInterfaceType> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceGrounding>)
+
+# Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceRegistry> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceRegistry>)
+
+SubClassOf(<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceRegistry> <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType>)
 
 # Class: <http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType> (<http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ServiceSWCType>)
 

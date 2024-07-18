@@ -1,19 +1,29 @@
-info: 
-   title: VehicleOntologyChoreography
-   licence: Apache2.0
-   nameofthecomponent: DoorSensingControl
-   url: http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#DoorSensingControl
-   description: AUTOSAR_Adaptiveframework
-   version: 1.0.0
-   components: 
-    attributes: 
-      methods: ReadUserImage
-      provided: ReadUserImage
-      name: http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#ReadUserImage
-      description: RPC based Client_Receiver
-      schema: null
-      in: null
-    schemas:
-      type: object
+{info: 'null
 
-    
+    ', '  title': 'VehicleOntologyChoreography
+
+    ', '  licence': 'Apache2.0
+
+    ', '  nameofthecomponent': 'LaneDepartureDisplay
+
+    ', '  url': 'http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#LaneDepartureDisplay
+
+    ', '  description': AUTOSAR_Adaptiveframework, '  version': '1.0.0
+
+    ', components: 'null
+
+    ', '  attributes': 'null
+
+    ', '    methods': 'Roadobjectsdetection
+
+    ', '    required': 'Roadobjectsdetection
+
+    ', '      name': 'http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Roadobjectsdetection
+
+    ', '      description': 'RPC based Client_Receiver
+
+    ', '      schema': 'null
+
+    ', '      in': 'null
+
+    '}

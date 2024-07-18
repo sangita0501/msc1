@@ -4,9 +4,9 @@
 
     ', '  licence': 'Apache2.0
 
-    ', '  nameofthecomponent': 'SeaTSensor
+    ', '  nameofthecomponent': 'RouteVisualizer
 
-    ', '  url': 'http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#SeaTSensor
+    ', '  url': 'http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#RouteVisualizer
 
     ', '  description': AUTOSAR_Adaptiveframework, '  version': '1.0.0
 
@@ -14,11 +14,11 @@
 
     ', '  attributes': 'null
 
-    ', '    events': 'Seatsensing
+    ', '    events': 'Autoobstaclewarningdisplay
 
-    ', '    published': 'Seatsensing
+    ', '    subscribed': 'Autoobstaclewarningdisplay
 
-    ', '      name': 'http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Seatsensing
+    ', '      name': 'http://www.semanticweb.org/owlapi/ontologies/ontology/VehicleServie_Ontology#Autoobstaclewarningdisplay
 
     ', '      description': 'REST based HTTP_Method
 

@@ -7,6 +7,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import com.google.common.collect.Lists;
 
 import owlapi.tutorial.*;
 import java.io.File;
@@ -38,6 +39,10 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.stream.Stream;
+import javax.swing.*;
+import javax.swing.table.*;
+import java.awt.*;
+ 
 
 import javax.naming.ldap.ManageReferralControl;
 import javax.naming.spi.ObjectFactory;
@@ -59,6 +64,7 @@ import org.semanticweb.owlapi.model.OWLDeclarationAxiom;
 import org.semanticweb.owlapi.model.OWLDocumentFormat;
 import org.semanticweb.owlapi.model.OWLEntity;
 import org.semanticweb.owlapi.model.OWLIndividual;
+import org.semanticweb.owlapi.model.OWLIndividualAxiom;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLObjectPropertyAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -125,7 +131,7 @@ public class ONTCHOREOGRAPHER {
 private static Collection<?> propertiesCollection;
 	
 
-@SuppressWarnings("deprecation")
+@SuppressWarnings({ "deprecation", "resource" })
 public static void main(String[] args) throws OWLOntologyStorageException, JsonMappingException,JsonParseException,IOException {
 OWLOntologyManager man = OWLManager.createOWLOntologyManager();
 File fileout = new File("C:\\Backup_uids2837_from_C_Drive\\uids2837\\eclipse-workspace_testprotege\\test_mediator.owl");
@@ -136,13 +142,6 @@ man.saveOntology(med_ont, new FunctionalSyntaxDocumentFormat(), new FileOutputSt
 System.out.println(med_ont);
 
 //Creating User Ontology
-
-/*
-System.out.println("Enter the IRI of the Existing Ontology");
-Scanner in = new Scanner(System.in); 
-String user_ont = in.nextLine(); 
-System.out.println("You entered string "+user_ont); 
-*/
 
 File file3 = new File ("C:\\Backup_uids2837_from_C_Drive\\uids2837\\eclipse-workspace_testprotege\\msc1\\src\\main\\resources\\"+ "OntologyChoreography.owl");
 
@@ -241,6 +240,11 @@ OWLClass Servicegroundtype = df5.getOWLClass(iri1+"#ServiceGrounding");
 OWLSubClassOfAxiom w_sub_p400 = df5.getOWLSubClassOfAxiom(Servicegroundtype,SWCtype);
 userOntology.add(w_sub_p400);
 
+//++++++++++
+OWLClass Serviceregistrytype = df5.getOWLClass(iri1+"#ServiceRegistry");
+OWLSubClassOfAxiom w_sub_p500 = df5.getOWLSubClassOfAxiom(Serviceregistrytype,SWCtype);
+userOntology.add(w_sub_p500);
+		
 //+++++++
 OWLClass ServiceInterfacetype = df5.getOWLClass(iri1+"#ServiceInterfaceType");
 OWLSubClassOfAxiom w_sub_p1 = df5.getOWLSubClassOfAxiom(ServiceInterfacetype,Servicegroundtype);
@@ -621,7 +625,7 @@ for (File file5 : filespar1) {
     
 }
 System.out.println("//////////////////////////////////////////////////////////////////");
-System.out.println("Time to display the Metrics before the Reasoning!!");
+System.out.println("Time to display the Metrics with Thresholds before the Reasoning!!");
 //String leftAlignFormat = "| %-4d | %-25s | %-25s | %25s | %25s |%n";
 
 //+++++READ EVALUATED QUALITY METRICS DATA FOR THE FRAMEWORKS+++++++
@@ -692,13 +696,17 @@ System.out.println("////////////////////////////////////////////////////////////
 
 
 
-for (int k=1; k < 6; k++)
+for (int k=1; k < 3; k++)
 {
+Scanner sc10= new Scanner(System.in);
 System.out.println("Are there any more components to be entered to Standard Ontology Template? ");
 System.out.println("++++ Please Enter the digit 1. Yes 2. No : ++++");
 
-Scanner sc10= new Scanner(System.in);
-Integer str_class3= sc10.nextInt();
+while (!sc10.hasNextInt()) {
+    System.out.println("That's not a Number!");
+   sc10.next(); // this is important!
+}
+int str_class3= sc10.nextInt();
 
 	
 	if (str_class3==1)
@@ -712,11 +720,17 @@ do
 }while (str_class3 == 0 || str_class3 >= 2);
 */
 //************Loop for for multiple SWC APIsbspecification*********************
+for (int ch=1; ch < 3 ; ch++)
+{
 System.out.println("*********  User Choice Components Entry Section ********");
-Scanner fwsc =new Scanner(System.in);
+
 Scanner sc1= new Scanner(System.in);
 System.out.println("Enter the number of SWCs whose APIs to be specified in generic template in digits (1...5): ");
-Integer intswc= sc1.nextInt();
+while (!sc1.hasNextInt()) {
+    System.out.println("That's not a Number!");
+    sc1.next(); // this is important!
+}
+int intswc= sc1.nextInt();
 System.out.println("**** Service Sowftware Component API Specifications*****");
 int i= 1;
 int arr[]= null;
@@ -725,12 +739,25 @@ if (intswc >= 1 && intswc<=5)
 do {
 //for (int i= 1; i<= intswc; i++) {
 	
-
+Scanner fwsc =new Scanner(System.in);
 System.out.println("Enter the Number of the Automotive Service Framework whose SWC API needs to specified in standardized Ontology \n 1. Autosar_Adaptive \n 2.Franca \n 3.ROS2 ");
+while (!fwsc.hasNextInt()) {
+    System.out.println("That's not a Number!");
+    fwsc.next(); // this is important!
+}
 int fwsc_class = fwsc.nextInt();
+
+
+System.out.println(" Enter the name of the associated SWC Type:");
+Scanner sc= new Scanner(System.in);
+while (!sc.hasNextLine()) {
+    System.out.println("That's not a Name/String!");
+    sc.next(); // this is important!
+}
+String str_class= sc.nextLine();
+
+
 //++++ Checking for Metamodel semantic Alignment above Threshold +++++++
-
-
 if (fwsc_class==1) {
 if ((Metr_AR[0] > SSS_THR) && (Metr_AR[1] > IRR_THR) && (Metr_AR[2] > CIC_THR)) {
 	System.out.println("*********  User Choice Framework Metamodels is semantically aligned at Schema and instance Level !! ********");
@@ -778,70 +805,195 @@ else if (fwsc_class==3) {
 	else {
 		System.out.println("*********  User Choice Framework Metamodels is not semantically aligned  at Schema and instance Level******");
 	}
-	
-Scanner sc= new Scanner(System.in);
-System.out.println(" Enter The name of the Service SWC Type:");
-String str_class= sc.nextLine();
+//Number of Services supported by each Framework SWCs
+
+System.out.println(" Enter the number of the Services supported by this SWC? ");
+Scanner scnum= new Scanner (System.in);
+while (!scnum.hasNextInt()) {
+    System.out.println("That's not a valid Number!");
+    scnum.next(); // this is important!
+}
+int input4 = scnum.nextInt();
+for (int servcount=1; servcount<=input4; servcount++) {
 
 
+System.out.println(" Enter the name of the Service: ");
+Scanner sc112 = new Scanner (System.in);
+while (!sc112.hasNextLine()) {
+    System.out.println("That's not a String/Name!");
+    sc112.next(); // this is important!
+}
+String str_class15= sc112.nextLine();
+
+
+System.out.println(" Enter the major version of the Service in Integer Interpretation:");
+Scanner sc111= new Scanner (System.in);
+while (!sc111.hasNextInt()) {
+    System.out.println("That's not a valid Number!");
+    sc111.next(); // this is important!
+}
+int input = sc111.nextInt();
+
+System.out.println(" Enter the minor version of the Service in Integer Interpretation:");
+Scanner sc116= new Scanner (System.in);
+while (!sc116.hasNextInt()) {
+    System.out.println("That's not a valid Number!");
+    sc116.next(); // this is important!
+}
+int input1 = sc116.nextInt();
+String vers= "V"+ input+ "."+ input1;
+
+//int listent1= servcount +1000;
+System.out.println(" The Generated ServiceID:");
+String serviceid= "SID:"+ "S"+intswc+fwsc_class+"000"+ servcount;
+System.out.println(serviceid);
 //++++++++++
-OWLClass SWCUserType = df5.getOWLClass(iri1+"#"+ str_class);
+OWLClass SWCUserType = df5.getOWLClass(iri1+"#"+ str_class + "_SWC");
 OWLSubClassOfAxiom w_sub_p251 = df5.getOWLSubClassOfAxiom(SWCUserType, SWCtype);
 userOntology.add(w_sub_p251);
 
 man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
+/* SERVICE REGISTRY with unique entry*/
 
+//++++++++++++
+OWLClass ServiceUserType = df5.getOWLClass(iri1+"#"+ "SID: "+ serviceid +" "+ "Framework: "+fwsc_class+" ServiceName: "+ str_class15 + "_Service"+ " ServiceVersion: "+vers);
+OWLSubClassOfAxiom w_sub_p255 = df5.getOWLSubClassOfAxiom(ServiceUserType, Serviceregistrytype);
+OWLClass SWCUserTypeent = df5.getOWLClass(iri1+"#"+ str_class + "_SWC");
+OWLSubClassOfAxiom w_sub_p286 = df5.getOWLSubClassOfAxiom(SWCUserTypeent,ServiceUserType );
+
+
+if (vers!= null) {
+userOntology.add(w_sub_p286);
+userOntology.add(w_sub_p255);
+
+ArrayList<OWLClass> servicelist = new ArrayList<OWLClass>();
+Serviceregistrytype.classesInSignature().forEach(servicelist::add);
+man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
+}
+
+else
+{
+	System.out.println(" Entered Service Version is INVALID or DUPLICATE. Could not be entered in Service Registry!!");
+}
+
+//+++ Define Number of Service Instances
+
+System.out.println("Does the Service Method has Service Instances:1. Yes 2. No?");
+Scanner sc11= new Scanner(System.in);
+while (!sc11.hasNextInt()) {
+    System.out.println("That's not a valid Number!");
+    sc11.next(); // this is important!
+}
+int str_chck = sc11.nextInt();
+if (str_chck == 1) {
+
+Scanner str_chckn = new Scanner (System.in);
+System.out.println("Enter the number of Service Instances: ");
+while (!str_chckn.hasNextInt()) {
+    System.out.println("That's not a valid Number!");
+    str_chckn.next(); // this is important!
+}
+int input3 = str_chckn.nextInt();
+
+for (int i12=1; i12<= input3; i12++)
+{	
+Scanner sc7= new Scanner(System.in);
+System.out.println("Enter the name Service Instances: ");
+while (!sc7.hasNextLine()) {
+    System.out.println("That's not a Name/String!");
+    sc7.next(); // this is important!
+}
+String str_class6= sc7.nextLine();
+OWLIndividual servinst = df5.getOWLNamedIndividual(iri1 + "#"+ str_class6);
+
+
+OWLAxiom b = df5.getOWLSubObjectPropertyOfAxiom(issimilar, iscompatible); 
+OWLAxiom e = df5.getOWLSubDataPropertyOfAxiom(semantictype, hastype);
+OWLAxiom c = df5.getOWLEquivalentObjectPropertiesAxiom(issimilar, iscompatible);
+OWLAxiom f = df5.getOWLEquivalentDataPropertiesAxiom(semantictype, hastype);
+//	OWLObjectProperty c = df5.getOWLObjectOneOf(str_class6);	
+OWLClassAssertionAxiom ax5 = df5.getOWLClassAssertionAxiom(SWCUserType, servinst);
+man.addAxiom(userOntology, ax5);
+OWLObjectPropertyAssertionAxiom assertion6 = df5.getOWLObjectPropertyAssertionAxiom(issimilar, servinst,AtomicSWCType);
+AddAxiom addAxiomChange5 = new AddAxiom(userOntology, assertion6);
+AddAxiom addAxiomChange6 = new AddAxiom(userOntology, c);
+AddAxiom addAxiomChange7 = new AddAxiom(userOntology, f);
+man.applyChange(addAxiomChange5);
+man.applyChange(addAxiomChange6);
+man.applyChange(addAxiomChange7);
+}
+
+}
+
+else
+{
+	System.out.println("The Service Method has no Service Instances!!!");
+}
+
+//+++++
 
 
 
 //+++++++
 
 Scanner sc3= new Scanner(System.in);
-System.out.println("Enter the number for the respective Communication Paradigm: \n 1. REST  \n 2. RPC ");
-Integer str_class1= sc3.nextInt();
+System.out.println("Enter the number for the respective Communication Paradigm: \n 1. REST  \n 2. RPC  \n 3. Public_Subscribe");
+while (!sc3.hasNextInt()) {
+    System.out.println("That's not a valid Number!");
+    sc3.next(); // this is important!
+}
+int str_class1= sc3.nextInt();
 
 if ((fwsc_class==1) || (fwsc_class==2) || (fwsc_class==3)|| (fwsc_class== 4))
 {
 	// PORT PROTOTYPES SPECIFICATION
-/*
-	Scanner fwsc16 =new Scanner(System.in);
-	System.out.println(" Enter the number of Provided Service ports for Service SWC Type:");
-	int fwsc_class2 = fwsc16.nextInt();
-	
-	Scanner fwsc17 =new Scanner(System.in);
-	System.out.println(" Enter the number of Required Service ports  for Service SWC Type:");
-	int fwsc_class3 = fwsc17.nextInt();
-*/
 	
 if(str_class1==2)
 {
 	Scanner sc4= new Scanner(System.in);
 	System.out.println("Enter the number for the Service Interface Type: \n 1. SenderReceiver \n 2.ClientServer");
-	Integer str_class2= sc4.nextInt();
+	while (!sc4.hasNextInt()) {
+	    System.out.println("That's not a valid Number!");
+	    sc4.next(); // this is important!
+	}
+	int str_class2= sc4.nextInt();
 	
 	if(str_class2==1) {
 		Scanner sc5= new Scanner(System.in);
 		System.out.println("Enter the name for the Service Interface RPC Method: ");
+		while (!sc5.hasNextLine()) {
+		    System.out.println("That's not a Name/String!");
+		    sc5.next(); // this is important!
+		}
 		String str_class4= sc5.nextLine();
 		
 		 
 		OWLClass SWCUserInterType = df5.getOWLClass(iri1+"#"+str_class4);
 		OWLSubClassOfAxiom w_sub_p225 = df5.getOWLSubClassOfAxiom(SWCUserInterType, Interfacesubtype_SenderReceiver);
+		OWLSubClassOfAxiom w_sub_p330 = df5.getOWLSubClassOfAxiom(SWCUserInterType, Serviceregistrytype);
 		userOntology.add(w_sub_p225);
-		
+		userOntology.add(w_sub_p330);
 			
 		System.out.println("Method Successfully created!");
 		man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 		
 		Scanner sc15= new Scanner(System.in);
-		System.out.println("Is this Service Method to be defined for 1. Provided OR 2. Required Service Ports.Please enter the corresponding didit(1/2)? ");
-		Integer str_class5= sc15.nextInt();
+		System.out.println("Is this Service Method to be defined on 1. Provided OR 2. Required Service Port.Please enter the corresponding digit(1/2)? ");
+		while (!sc15.hasNextInt()) {
+		    System.out.println("That's not a valid Number!");
+		    sc15.next(); // this is important!
+		}
+		int str_class5= sc15.nextInt();
 		
 		if(str_class5==1) {
 
 							
 				Scanner sc2= new Scanner(System.in);
 				System.out.println(" Enter The name of the Provided Service Port Name one at a time:");
+				while (!sc2.hasNextLine()) {
+				    System.out.println("That's not a Name/String!");
+				    sc2.next(); // this is important!
+				}
 				String str_class6= sc2.nextLine();
 
 				OWLClass SWCportprototype = df5.getOWLClass(iri1+"#"+ str_class6+ "_ProvidedPortPrototype");
@@ -862,6 +1014,10 @@ if(str_class1==2)
 			
 			Scanner sc12= new Scanner(System.in);
 			System.out.println(" Enter The name of the Required Service Port Name one at a time:");
+			while (!sc12.hasNextLine()) {
+			    System.out.println("That's not a Name/String!");
+			    sc12.next(); // this is important!
+			}
 			String str_class53= sc12.nextLine();
 
 			OWLClass SWCportprototype1 = df5.getOWLClass(iri1+"#"+ str_class53+"_RequiredPortPrototype");
@@ -881,7 +1037,7 @@ if(str_class1==2)
 		
 		//+++Metrics Quality Check For Methods Semantic Alignment!!
 
-		if (fwsc_class == 1 &&(( Metr_AR[0] > SSS_THR) && ((Metr_AR[1] > IRR_THR) || (Metr_AR[2] > CIC_THR)))) 
+		if (fwsc_class == 1 &&(( Metr_AR[0] > SSS_THR) || ((Metr_AR[1] > IRR_THR) || (Metr_AR[2] > CIC_THR)))) 
 		{
 			System.out.println("Semantic Alignment of AUTOSAR Adaptive Methods Begins....!! ");
 		
@@ -890,7 +1046,7 @@ if(str_class1==2)
 	        man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 		}
 		
-		else if (fwsc_class == 2 && (( Metr_Fr[0] > SSS_THR) && ((Metr_Fr[1] > IRR_THR) || (Metr_Fr[2] > CIC_THR)))) 
+		else if (fwsc_class == 2 && (( Metr_Fr[0] > SSS_THR) || ((Metr_Fr[1] > IRR_THR) || (Metr_Fr[2] > CIC_THR)))) 
 		{
 			System.out.println("Semantic Alignment of Franca Methods Begins....!! ");
 		
@@ -899,7 +1055,7 @@ if(str_class1==2)
 	        man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 		}
 		
-		else if (fwsc_class == 3 && (( Metr_ROS[0] > SSS_THR) && ((Metr_ROS[1] > IRR_THR) || (Metr_ROS[2] > CIC_THR)))) 
+		else if (fwsc_class == 3 && (( Metr_ROS[0] > SSS_THR) || ((Metr_ROS[1] > IRR_THR) || (Metr_ROS[2] > CIC_THR)))) 
 		{
 			System.out.println("Semantic Alignment of  ROS Methods Begins....!! ");
 		
@@ -952,44 +1108,7 @@ if(str_class1==2)
 			System.out.println("Semantic Alignment of Methods not possible as Evaluated Metric is less than the Threshold....!! ");
 		}
 		
-		//+++ Define Number of Service Instances
-				Scanner sc11= new Scanner(System.in);
-				System.out.println("Does the Service Method has Service Instances:1. Yes 2. No?");
-			    Integer str_chck = sc11.nextInt();
-			    if (str_chck == 1) {
-			    
-			    Scanner sc12= new Scanner(System.in);
-				System.out.println("Enter the number of Service Instances: ");
-				Integer str_chckn = sc12.nextInt();
-				for (int i12=1; i12<= str_chckn; i12++)
-				{	
-			    Scanner sc7= new Scanner(System.in);
-				System.out.println("Enter the name Service Instances: ");
-				String str_class6= sc7.nextLine();
-				OWLIndividual servinst = df5.getOWLNamedIndividual(iri1 + "#"+ str_class6);
-				
-			    
-			    OWLAxiom b = df5.getOWLSubObjectPropertyOfAxiom(issimilar, iscompatible); 
-			    OWLAxiom e = df5.getOWLSubDataPropertyOfAxiom(semantictype, hastype);
-			    OWLAxiom c = df5.getOWLEquivalentObjectPropertiesAxiom(issimilar, iscompatible);
-			    OWLAxiom f = df5.getOWLEquivalentDataPropertiesAxiom(semantictype, hastype);
-				//	OWLObjectProperty c = df5.getOWLObjectOneOf(str_class6);	
-				OWLClassAssertionAxiom ax5 = df5.getOWLClassAssertionAxiom(SWCUserInterType, servinst);
-				man.addAxiom(userOntology, ax5);
-				OWLObjectPropertyAssertionAxiom assertion6 = df5.getOWLObjectPropertyAssertionAxiom(issimilar, servinst,AtomicSWCType);
-				AddAxiom addAxiomChange5 = new AddAxiom(userOntology, assertion6);
-				AddAxiom addAxiomChange6 = new AddAxiom(userOntology, c);
-				AddAxiom addAxiomChange7 = new AddAxiom(userOntology, f);
-				man.applyChange(addAxiomChange5);
-				man.applyChange(addAxiomChange6);
-				man.applyChange(addAxiomChange7);
-				}
-			    }
-				else
-			    {
-			    	System.out.println("The Service Method has no Service Instances!!!");
-			    }
-			    
+		
 							
 					
 		//++++++ YAML MAPPINGs!!
@@ -1056,9 +1175,14 @@ if(str_class1==2)
 		
 			
 	}
+	}
 	else {
 		Scanner sc9= new Scanner(System.in);
 		System.out.println("Enter the name for the Service Interface RPC Method: ");
+		while (!sc9.hasNextLine()) {
+		    System.out.println("That's not a Name/String!");
+		    sc9.next(); // this is important!
+		}
 		String str_class9= sc9.nextLine();
 		
 		OWLClass SWCUserInterType11 = df5.getOWLClass(iri1+"#"+str_class9);
@@ -1069,14 +1193,22 @@ if(str_class1==2)
 		man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 		
 		Scanner sc16= new Scanner(System.in);
-		System.out.println("Is this Service Method to be defined for 1. Provided OR 2. Required Service Ports.Please enter the corresponding didit(1/2)? ");
-		Integer str_class6= sc16.nextInt();
+		System.out.println("Is this Service Method to be defined on 1. Provided OR 2. Required Service Ports.Please enter the corresponding digit(1/2)? ");
+		while (!sc16.hasNextInt()) {
+		    System.out.println("That's not a valid Number!");
+		    sc16.next(); // this is important!
+		}
+		int str_class6= sc16.nextInt();
 		
-		if(str_class5==1) {
+		if(str_class6==1) {
 
 							
 				Scanner sc2= new Scanner(System.in);
 				System.out.println(" Enter The name of the Provided Service Port Name one at a time:");
+				while (!sc2.hasNextLine()) {
+				    System.out.println("That's not a Name/String!");
+				    sc2.next(); // this is important!
+				}
 				String str_class7= sc2.nextLine();
 
 				OWLClass SWCportprototype = df5.getOWLClass(iri1+"#"+ str_class7+ "_ProvidedPortPrototype");
@@ -1086,17 +1218,21 @@ if(str_class1==2)
 				man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 				
 				
-			OWLClass SWCUserMethodType = df5.getOWLClass(iri1+"#"+str_class4);
+			OWLClass SWCUserMethodType = df5.getOWLClass(iri1+"#"+str_class9);
 			OWLSubClassOfAxiom w_sub_p227 = df5.getOWLSubClassOfAxiom(SWCUserMethodType, SWCportprototype);
 			userOntology.add(w_sub_p227);	
 			
 			man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 		}
 		
-		else if (str_class5==2) {
+		else if (str_class6==2) {
 			
 			Scanner sc12= new Scanner(System.in);
 			System.out.println(" Enter The name of the Required Service Port Name one at a time:");
+			while (!sc12.hasNextLine()) {
+			    System.out.println("That's not a Name/String!");
+			    sc12.next(); // this is important!
+			}
 			String str_class53= sc12.nextLine();
 
 			OWLClass SWCportprototype1 = df5.getOWLClass(iri1+"#"+ str_class53+"_RequiredPortPrototype");
@@ -1106,7 +1242,7 @@ if(str_class1==2)
 			man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 			
 		
-		OWLClass SWCUserMethodType = df5.getOWLClass(iri1+"#"+str_class4);
+		OWLClass SWCUserMethodType = df5.getOWLClass(iri1+"#"+str_class9);
 		OWLSubClassOfAxiom w_sub_p227 = df5.getOWLSubClassOfAxiom(SWCUserMethodType, SWCportprototype1);
 		userOntology.add(w_sub_p227);	
 		
@@ -1121,7 +1257,7 @@ if(str_class1==2)
 		{
 			System.out.println("Semantic Alignment of AUTOSAR Adaptive Methods Begins....!! ");
 		
-			OWLAxiom a = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType), df5.getOWLClass(Interfacesubtype_ClientServer));
+			OWLAxiom a = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType11), df5.getOWLClass(Interfacesubtype_ClientServer));
 	        userOntology.add(a);
 	        man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 		}
@@ -1130,7 +1266,7 @@ if(str_class1==2)
 		{
 			System.out.println("Semantic Alignment of Franca Methods Begins....!! ");
 		
-			OWLAxiom a = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType), df5.getOWLClass(Interfacesubtype_ClientServer));
+			OWLAxiom a = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType11), df5.getOWLClass(Interfacesubtype_ClientServer));
 	        userOntology.add(a);
 	        man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 		}
@@ -1139,7 +1275,7 @@ if(str_class1==2)
 		{
 			System.out.println("Semantic Alignment of  ROS Methods Begins....!! ");
 		
-			OWLAxiom a = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType), df5.getOWLClass(Interfacesubtype_ClientServer));
+			OWLAxiom a = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType11), df5.getOWLClass(Interfacesubtype_ClientServer));
 	        userOntology.add(a);
 	        man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 		}
@@ -1147,11 +1283,11 @@ if(str_class1==2)
 		{
 			System.out.println("Semantic Alignment of AUTOSAR Adaptive Methods w.r.t other FW API  Begins....!! ");
 		
-			OWLAxiom a1 = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType), df5.getOWLClass(Interfacesubtype_ClientServer));
+			OWLAxiom a1 = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType11), df5.getOWLClass(Interfacesubtype_ClientServer));
 	        userOntology.add(a1);
 	        man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 			
-			OWLAxiom a = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType), df5.getOWLClass(SWCUserInterType));
+			OWLAxiom a = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType11), df5.getOWLClass(SWCUserInterType11));
 	        userOntology.add(a);
 	        man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 		   
@@ -1160,11 +1296,11 @@ if(str_class1==2)
 		{
 			System.out.println("Semantic Alignment of Franca Methods w.r.t other FW API Begins....!! ");
 		
-			OWLAxiom a1 = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType), df5.getOWLClass(Interfacesubtype_ClientServer));
+			OWLAxiom a1 = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType11), df5.getOWLClass(Interfacesubtype_ClientServer));
 	        userOntology.add(a1);
 	        man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 						
-			OWLAxiom a = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType), df5.getOWLClass(SWCUserInterType));
+			OWLAxiom a = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType11), df5.getOWLClass(SWCUserInterType11));
 	        userOntology.add(a);
 	        man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 		   
@@ -1173,11 +1309,11 @@ if(str_class1==2)
 		{
 			System.out.println("Semantic Alignment of ROS Methods w.r.t other FW API  Begins....!! ");
 			
-			OWLAxiom a1 = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType), df5.getOWLClass(Interfacesubtype_ClientServer));
+			OWLAxiom a1 = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType11), df5.getOWLClass(Interfacesubtype_ClientServer));
 	        userOntology.add(a1);
 	        man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3)); 
 						
-			OWLAxiom a = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType), df5.getOWLClass(SWCUserInterType));
+			OWLAxiom a = df5.getOWLEquivalentClassesAxiom(df5.getOWLClass(SWCUserInterType11), df5.getOWLClass(SWCUserInterType11));
 	        userOntology.add(a);
 	        man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 		   
@@ -1187,39 +1323,6 @@ if(str_class1==2)
 			System.out.println("Semantic Alignment of Methods Not possible as Evaluated Metric is less than the Threshold....!! ");
 		}
 		
-		//+++ Define Number of Service Instances
-		Scanner sc14= new Scanner(System.in);
-		System.out.println("Does the Service Method has Service Instances:1. Yes 2. No?");
-	    Integer str_chck1 = sc14.nextInt();
-	    if (str_chck1 == 1) {
-	    
-	    Scanner sc12= new Scanner(System.in);
-		System.out.println("Enter the number of Service Instances: ");
-		Integer str_chckn = sc12.nextInt();
-		for (int i12=1; i12<= str_chckn; i12++)
-		{	
-	    Scanner sc7= new Scanner(System.in);
-		System.out.println("Enter the name Service Instances: ");
-		String str_class16= sc7.nextLine();
-		OWLIndividual servinst = df5.getOWLNamedIndividual(iri1 + "#"+ str_class16);
-		
-	    
-	    OWLAxiom b = df5.getOWLSubObjectPropertyOfAxiom(issimilar, iscompatible); 
-		OWLAxiom c = df5.getOWLEquivalentObjectPropertiesAxiom(issimilar, iscompatible);
-	//	OWLObjectProperty c = df5.getOWLObjectOneOf(str_class6);	
-		OWLClassAssertionAxiom ax5 = df5.getOWLClassAssertionAxiom(SWCUserInterType, servinst);
-		man.addAxiom(userOntology, ax5);
-		OWLObjectPropertyAssertionAxiom assertion6 = df5.getOWLObjectPropertyAssertionAxiom(issimilar, servinst,AtomicSWCType);
-		AddAxiom addAxiomChange7 = new AddAxiom(userOntology, assertion6);
-		AddAxiom addAxiomChange8 = new AddAxiom(userOntology, c);
-		man.applyChange(addAxiomChange7);
-		man.applyChange(addAxiomChange8);
-		}
-	    }
-		else
-	    {
-	    	System.out.println("The Service Method has no Service Instances!!!");
-	    }
 	    
 	  //++++++ YAML MAPPINGs!!
 	  		final String myfilename1 = "C:/Backup_uids2837_from_C_Drive/uids2837/eclipse-workspace_testprotege/msc1/src/main/resources/test4.yaml";
@@ -1228,8 +1331,8 @@ if(str_class1==2)
 	  		System.out.println("***++++++++***");
 	  		Yaml yaml11 = new Yaml();
 	  		@SuppressWarnings("unchecked")
-	  		Map<String, Object> mydata1 = (Map<String, Object>) yaml1.load(myinputfile);
-	  		System.out.println(mydata);
+	  		Map<String, Object> mydata1 = (Map<String, Object>) yaml11.load(myinputfile1);
+	  		System.out.println(mydata1);
 
 	  		//find a key in the input stream
 
@@ -1238,57 +1341,62 @@ if(str_class1==2)
 	  		String str22 = "VehicleOntologyChoreography";
 	  		String str23 = "Apache2.0" ;
 	  		String str24 = str_class;
-	  		String str25 = ""+iri1+"#"+str4 ;
+	  		String str25 = ""+iri1+"#"+str24 ;
 	  		String str26= "Generic API Mocking";
 	  		String str27= "1.0.0";
 	  		String str28= "\n";
 
 	  		//Separate indentation levels data mapping
-	  		if(mydata.containsKey("info")){
-	  		dataMap1.put("info", str21+str8 );
-	  		dataMap1.put("  title",str22+str8 );
-	  		dataMap1.put("  licence", str23+str8 );
-	  		dataMap1.put("  nameofthecomponent", str_class+str8 );
-	  		dataMap1.put("  url", str25+str8);
-	  		dataMap1.put("  description", "AUTOSAR_Adaptive" + "framework");
-	  		dataMap1.put("  version", str27+str8 );
+	  		if(mydata1.containsKey("info")){
+	  		dataMap21.put("info", str21+str28 );
+	  		dataMap21.put("  title",str22+str28 );
+	  		dataMap21.put("  licence", str23+str28 );
+	  		dataMap21.put("  nameofthecomponent", str_class+str28 );
+	  		dataMap21.put("  url", str25+str28);
+	  		dataMap21.put("  description", "AUTOSAR_Adaptive" + "framework");
+	  		dataMap21.put("  version", str27+str28 );
 
 
-	  		if (mydata.containsKey("components")){
-	  		dataMap1.put("components", str1+str8 );	
-	  		dataMap1.put("  attributes", str1+str8 );
-	  		dataMap1.put("    methods", str_class4+ str8 );
-	  		if (str_class5==2) {
-				dataMap1.put("    required",str_class4 + str8);
+	  		if (mydata1.containsKey("components")){
+	  		dataMap21.put("components", str21+str28 );	
+	  		dataMap21.put("  attributes", str21+str28 );
+	  		dataMap21.put("    methods", str_class9+ str28 );
+	  		if (str_class6==2) {
+				dataMap21.put("    required",str_class9 + str28);
 				}
-				else if (str_class5==1) {
-					dataMap1.put("    provided",str_class4 + str8);	
+				else if (str_class6==1) {
+					dataMap21.put("    provided",str_class9 + str28);	
 				}
 				else {
 					System.out.println("***No Ports to display***");
 				}
-	  		dataMap1.put("      name", iri1+"#"+str_class4+str8 );
-	  		dataMap1.put("      description", "RPC based Client_Receiver"  + str8  );
-	  		dataMap1.put("      schema", str1+str8 );
-	  		dataMap1.put("      in", str1+str8 );
+	  		dataMap21.put("      name", iri1+"#"+str_class9+str28 );
+	  		dataMap21.put("      description", "RPC based Client_Receiver"  + str28  );
+	  		dataMap21.put("      schema", str21+str28 );
+	  		dataMap21.put("      in", str21+str28 );
 	  		
 	  		
 	  		}
 
-	  		FileWriter writer = new FileWriter(myfilename);
-	  		yaml1.dump( dataMap1, writer );
-	  		System.out.println(dataMap1);
+	  		FileWriter writer = new FileWriter(myfilename1);
+	  		yaml11.dump( dataMap21, writer );
+	  		System.out.println(dataMap21);
 	  		}
+	  		
 	  		
 	  			  
 					
 	}
-	
-}
+}	
+
 else if(str_class1==1)
 {
 	Scanner sc5= new Scanner(System.in);
 	System.out.println("Enter the name for the Service Interface HTTP Method: ");
+	while (!sc5.hasNextLine()) {
+	    System.out.println("That's not a Name/String!");
+	    sc5.next(); // this is important!
+	}
 	String str_class4= sc5.nextLine();
 	
 	OWLClass SWCUserInterType = df5.getOWLClass(iri1+"#"+str_class4);
@@ -1300,14 +1408,22 @@ else if(str_class1==1)
 	man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 	
 	Scanner sc15= new Scanner(System.in);
-	System.out.println("Is this Service Method to be defined for 1. Provided OR 2. Required Service Ports.Please enter the corresponding didit(1/2)? ");
-	Integer str_class5= sc15.nextInt();
+	System.out.println("Is this Service Method to be defined on 1. Provided OR 2. Required Service Ports.Please enter the corresponding digit(1/2)? ");
+	while (!sc15.hasNextInt()) {
+	    System.out.println("That's not a Name/String!");
+	    sc15.next(); // this is important!
+	}
+	int str_class5= sc15.nextInt();
 	
 	if(str_class5==1) {
 
 						
 			Scanner sc2= new Scanner(System.in);
 			System.out.println(" Enter The name of the Provided Service Port Name one at a time:");
+			while (!sc2.hasNextLine()) {
+			    System.out.println("That's not a Name/String!");
+			    sc2.next(); // this is important!
+			}
 			String str_class6= sc2.nextLine();
 
 			OWLClass SWCportprototype = df5.getOWLClass(iri1+"#"+ str_class6+ "_ProvidedPortPrototype");
@@ -1328,6 +1444,10 @@ else if(str_class1==1)
 		
 		Scanner sc12= new Scanner(System.in);
 		System.out.println(" Enter The name of the Required Service Port Name one at a time:");
+		while (!sc12.hasNextLine()) {
+		    System.out.println("That's not a Name/String!");
+		    sc12.next(); // this is important!
+		}
 		String str_class53= sc12.nextLine();
 
 		OWLClass SWCportprototype1 = df5.getOWLClass(iri1+"#"+ str_class53+"_RequiredPortPrototype");
@@ -1380,30 +1500,7 @@ else if(str_class1==1)
 		System.out.println("Semantic Alignment of Methods Not possible as Evaluated Metric is less than the Threshold....!! ");
 	}
 	
-		//+++ Define Number of Service Instances
-			Scanner sc11= new Scanner(System.in);
-			System.out.println("Does the Service Method has Service Instances:1. Yes 2. No?");
-		    Integer str_chck = sc11.nextInt();
-		    if (str_chck == 1) {
-		    
-		    Scanner sc12= new Scanner(System.in);
-			System.out.println("Enter the number of Service Instances: ");
-			Integer str_chckn = sc12.nextInt();
-			for (int i12=1; i12<= str_chckn; i12++)
-			{	
-		    Scanner sc7= new Scanner(System.in);
-			System.out.println("Enter the name Service Instances: ");
-			String str_class6= sc7.nextLine();
-			OWLIndividual servinst = df5.getOWLNamedIndividual(iri1 + "#"+ str_class6);
-			
-			OWLClassAssertionAxiom ax5 = df5.getOWLClassAssertionAxiom(SWCUserInterType, servinst);
-			man.addAxiom(userOntology, ax5);
-			}
-		    }
-		    else
-		    {
-		    	System.out.println("The Service Method has no Service Instances!!!");
-		    }
+		
 		    
 		  //++++++ YAML MAPPINGs!!
 	  		final String myfilename = "C:/Backup_uids2837_from_C_Drive/uids2837/eclipse-workspace_testprotege/msc1/src/main/resources/test5.yaml";
@@ -1467,10 +1564,14 @@ else if(str_class1==1)
 		    
 	
 }
-else
+else if (str_class1==3)
 {
 	Scanner sc5= new Scanner(System.in);
-	System.out.println("Enter the name of the Service Interface Event: ");
+	System.out.println("Enter the name of the Service Interface Event for the Publish_Subscribe Paradigm: ");
+	while (!sc5.hasNextLine()) {
+	    System.out.println("That's not a Name/String!");
+	    sc5.next(); // this is important!
+	}
 	String str_class4= sc5.nextLine();
 	
 	OWLClass SWCUserInterType = df5.getOWLClass(iri1+"#"+str_class4);
@@ -1482,14 +1583,22 @@ else
 	man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
 	
 	Scanner sc15= new Scanner(System.in);
-	System.out.println("Is this Service Method to be defined for 1. Provided OR 2. Required Service Ports.Please enter the corresponding didit(1/2)? ");
-	Integer str_class5= sc15.nextInt();
+	System.out.println("Is this Service Method to be defined on 1. Provided OR 2. Required Service Ports.Please enter the corresponding digit(1/2)? ");
+	while (!sc15.hasNextInt()) {
+	    System.out.println("That's not a Name/String!");
+	    sc15.next(); // this is important!
+	}
+	int str_class5= sc15.nextInt();
 	
 	if(str_class5==1) {
 
 						
 			Scanner sc2= new Scanner(System.in);
 			System.out.println(" Enter The name of the Provided Service Port Name one at a time:");
+			while (!sc2.hasNextLine()) {
+			    System.out.println("That's not a Name/String!");
+			    sc2.next(); // this is important!
+			}
 			String str_class6= sc2.nextLine();
 
 			OWLClass SWCportprototype = df5.getOWLClass(iri1+"#"+ str_class6+ "_ProvidedPortPrototype");
@@ -1510,6 +1619,10 @@ else
 		
 		Scanner sc12= new Scanner(System.in);
 		System.out.println(" Enter The name of the Required Service Port Name one at a time:");
+		while (!sc12.hasNextLine()) {
+		    System.out.println("That's not a Name/String!");
+		    sc12.next(); // this is important!
+		}
 		String str_class53= sc12.nextLine();
 
 		OWLClass SWCportprototype1 = df5.getOWLClass(iri1+"#"+ str_class53+"_RequiredPortPrototype");
@@ -1624,6 +1737,9 @@ else
 		
 	
 }
+else
+{
+	System.out.println("INVALID ENTRY MADE!!");
 }
 
 man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOutputStream(file3));
@@ -1632,10 +1748,12 @@ man.saveOntology(userOntology, new FunctionalSyntaxDocumentFormat(), new FileOut
 i++;
 }
 }
+}
 while (i<= intswc);
 }
 else {
 	System.out.println("INVALID ENTRY ENTERED!");
+	System.out.println("If you Wish you can Start the Tool again and Enter number of SWCs whose APIs to be specified in digits (1...5)!!");
 }
 
 //+++++++++++++++++++++++++++++++++INTER_GROUP Semantic Matching+++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1730,7 +1848,7 @@ class DLQueryEngine {
         }
         
 }
-
+	}
 }
 	else if(str_class3==2){
 		System.out.println("YOU HAVE NO MORE SOFTWARE COMPONENTS TO BE SPECIFIED IN STANDARD ONTOLOGY TEMPLATE!!");
@@ -1738,13 +1856,25 @@ class DLQueryEngine {
 	else {
 		System.out.println("You made an Invalid Choice,Please REENTER!!");
 	}
-	
+		
 }
 }
    catch (OWLOntologyCreationException e) {
 	System.out.println("You made an Invalid Choice!!");
 	e.printStackTrace();
 }
+}
+
+
+private static Object assertThat(List<Integer> keyList) {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+
+private static void assertEquals(ArrayList<Object> arrayList, List<String> valueList) {
+	// TODO Auto-generated method stub
+	
 }
 }
 
